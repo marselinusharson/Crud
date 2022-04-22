@@ -44,6 +44,7 @@ require_once __DIR__ . "./dbcon.php";
                                     <th>kategory</th>
                                     <th>Deskripsi</th>
                                     <th>Harga</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,10 +65,12 @@ require_once __DIR__ . "./dbcon.php";
                                                 <td><?= $row['category'] ?></td>
                                                 <td><?= $row['deskripsi'] ?></td>
                                                 <td>Rp <?= $row['price'] ?></td>
+                                                <td>
+                                                    <a href="edit_product.php?id=<?= $row['id'] ?>" class="btn btn-primary">Edit</a>
+                                                </td>
                                             </tr>
                                             <?php
                                         }
-
                                     }else{
                                         ?>
                                         <tr>
@@ -75,7 +78,6 @@ require_once __DIR__ . "./dbcon.php";
                                         </tr>
                                         <?php
                                     }
-
                                 ?>
                             </tbody>
                         </table>
